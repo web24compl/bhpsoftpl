@@ -1,3 +1,10 @@
+<?php
+
+require_once '../functions.php';
+
+$languageCode = getCurrentLanguageCode(__DIR__);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +17,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- master stylesheet -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Responsive stylesheet -->
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <!-- Favicon -->
 	<link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml">
 
@@ -23,7 +30,7 @@
     <!-- Fixing Internet Explorer-->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="/js/html5shiv.js"></script>
+    <script src="../js/html5shiv.js"></script>
     <![endif]-->
 
 </head>
@@ -33,6 +40,27 @@
 
 
 
+    <section class="top-bar-style1" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="top-style1 clearfix">
+                        <div class="top-right-style1 float-right">
+                            <div class="language-switcher">
+                                <div id="polyglotLanguageSwitcher">
+                                    <form action="">
+                                        <select id="polyglot-language-options">
+                                            <?php printLangaugesHTMLOptions($languageCode) ?>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--Start header style1 area-->
     <header class="header-style1-area">
         <div class="container">
@@ -40,7 +68,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12">
                     <div class="header-style1 clearfix">
                         <div class="header-style1-logo float-left">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="/images/resources/logo.svg" alt="BHPSoft">
                             </a>
                         </div>
@@ -52,8 +80,7 @@
                                             <span class="flaticon-accept"></span>
                                         </div>
                                         <div class="text">
-                                            <p>W pełni funkcjonalna<br>platforma<br>learningowo-sprzedażowa
-                                            </p>
+                                            <p>Fully functional<br>learning and sales<br>platform</p>
                                             <h3></h3>
                                         </div>
                                     </div>
@@ -64,7 +91,7 @@
                                             <span class="flaticon-accept"></span>
                                         </div>
                                         <div class="text">
-                                            <p>Kursy i szkolenia<br>finalizowane indywidualnym<br>certyfikatem</p>
+                                            <p>Courses and training<br>concluded with an individual<br>certificate</p>
                                             <h3></h3>
                                         </div>
                                     </div>
@@ -75,7 +102,7 @@
                                     <span class="icon-email"></span>
                                 </div>
                                 <div class="text">
-                                    <span>Kontakt z nami</span>
+                                    <span>Contact us</span>
                                     <h3 class="clr1"><a href="mailto:biuro@bhpsoft.pl">biuro@bhpsoft.pl</a></h3>
                                     <h3 class="clr1"><a href="tel:+48535954276">+48 535 954 276</a></h3>
                                 </div>
@@ -105,14 +132,14 @@
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
                                     <li class="dropdown current"><a href="#home">Home</a></li>
-                                    <li class="dropdown"><a href="#about">O bhpsoft</a>
-                                    <li><a href="#contact">Kontakt</a></li>
+                                    <li class="dropdown"><a href="#about">About bhpsoft</a>
+                                    <li><a href="#contact">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
                         <div class="mainmenu-right">
                             <div class="quote-button-box float-right">
-                                <a class="btn-one" href="mailto:biuro@bhpsoft.pl">Masz pytania? Napisz<span class="icon-thin-right-arrow"></span></a>
+                                <a class="btn-one" href="mailto:biuro@bhpsoft.pl">Have questions? Write to us.<span class="icon-thin-right-arrow"></span></a>
                             </div>
                         </div>
                     </div>
@@ -150,7 +177,7 @@
                              style="z-index: 7; white-space: nowrap;">
                             <div class="slide-content left-slide">
                                 <div class="big-title">
-                                    W pełni funkcjonalna platforma dla branży BHP
+                                    Fully functional platform for the Occupational Health and Safety industry
                                 </div>
                             </div>
                         </div>
@@ -172,7 +199,7 @@
                              data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                              style="z-index: 7; white-space: nowrap;">
                             <div class="slide-content left-slide">
-                                <div class="text">Twórz szkolenia i sprzedawaj je w sklepie on-line</div>
+                                <div class="text">Create and sell courses in the online store</div>
                             </div>
                         </div>
                         <div class="tp-caption"
@@ -221,7 +248,7 @@
                              style="z-index: 7; white-space: nowrap;">
                             <div class="slide-content">
                                 <div class="big-title">
-                                    Kursy dostępne on-line z każdego urządzenia
+                                    Courses available online from any device
                                 </div>
                             </div>
                         </div>
@@ -244,7 +271,7 @@
                              data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
                              style="z-index: 7; white-space: nowrap;">
                             <div class="slide-content">
-                                <div class="text">Oszczędzaj czas i zwiększaj efektywność sprzedaży</div>
+                                <div class="text">Save time and increase sales efficiency</div>
                             </div>
                         </div>
 
@@ -295,7 +322,7 @@
                              style="z-index: 7; white-space: nowrap;">
                             <div class="slide-content left-slide">
                                 <div class="big-title">
-                                    Trzy kroki do ukończenia kursu przez użytkownika
+                                    Three steps to complete the course for the user.
                                 </div>
                             </div>
                         </div>
@@ -318,7 +345,7 @@
                              style="z-index: 7; white-space: nowrap;">
                             <div class="slide-content left-slide">
                                 <div class="text">
-									1-przejdź szkolenie, 2-wypełnij test, 3-uzyskaj certyfikat
+                                    1. Complete the training, 2. Take the test, 3. Obtain the certificate.
                                 </div>
                             </div>
                         </div>
@@ -360,16 +387,15 @@
                 <div class="col-xl-6">
                     <div class="about-title">
                         <div class="sec-title">
-                            <div class="title"><span>O bhpsoft</span></div>
+                            <div class="title"><span>About Bhpsoft</span></div>
                         </div>
-                        <h1>Sprzedawaj szkolenia BHP <br>bez dojazdów, szybko i 24/7</h1>
+                        <h1>Sell occupational health and safety training <br>without travel, quickly, and 24/7</h1>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="about-text">
-                        <span>Platforma learningowo-sprzedażowa bhpsoft to w pełni funkcjonalny produkt e-commerce</span>
-                        <p>Platforma umożliwia sprzedaż i przeprowadzanie kursów całkowicie on-line, bez konieczności ruszania się sprzed komputera. Zawiera rozbudowany panel do zarządzania, ewidencji i raportowania sprzedaży oraz obsługi kursów.
-</p>
+                        <span>The Bhpsoft learning and sales platform is a fully functional e-commerce product.</span>
+                        <p>The platform enables the sale and conduct of courses entirely online, without the need to move away from the computer. It includes an extensive panel for sales management, recording, reporting, and course handling.</p>
                     </div>
                 </div>
             </div>
@@ -382,8 +408,8 @@
 								<img src="/images/icon/time_b.png">
                             </div>
                             <div class="text-box">
-                                <h3>Oszczędzaj czas</h3>
-                                <p>Dzięki dostępności on-line każdy może zakupić i ukończyć kurs w dogodnym dla niego terminie, a Ty możesz dodawać kolejne kursy i sprzedawać je nie ruszając się sprzed komputera</p>
+                                <h3>Save Time</h3>
+                                <p>Thanks to online accessibility, everyone can purchase and complete the course at their convenience, while you can add more courses and sell them without moving away from the computer.</p>
                             </div>
                         </div>
                     </div>
@@ -397,8 +423,8 @@
 								<img src="/images/icon/piggy-bank_b.png">
                             </div>
                             <div class="text-box">
-                                <h3>Zmniejszaj koszty</h3>
-                                <p>Wszystko, czego Ci trzeba do uruchomienia sprzedaży, to komputer, dostęp do internetu i Twój czas</p>
+                                <h3>Reduce Costs</h3>
+                                <p>All you need to start selling is a computer, internet access, and your time.</p>
                             </div>
                         </div>
                     </div>
@@ -412,8 +438,8 @@
 								<img src="/images/icon/increase_b.png">
                             </div>
                             <div class="text-box">
-                                <h3>Zwiększaj efektywność sprzedaży</h3>
-                                <p>Dzięki dostępności kursów on-line sprzedawaj bez ograniczeń terytorialnych i czasowych, kiedy chcesz i ile chcesz</p>
+                                <h3>Boost Sales Efficiency</h3>
+                                <p>Thanks to the availability of online courses, sell without territorial and time constraints, whenever and however you want.</p>
                             </div>
                         </div>
                     </div>
@@ -438,14 +464,9 @@
                 </div>
                 <div class="col-xl-6">
                     <div class="company-info-content">
-                        <h1>Zarządzaj kursami i sprzedażą w jednym miejscu</h1>
-                        <span>Bhpsoft pozwala na utrzymanie całego zarządzania platformą poprzez panel administratora. Dzięki niemu można tworzyć nowe kursy, przypisywać do nich testy wraz z pytaniami i odpowiedziami, zarządzać użytkownikami kursów, generować karty szkolenia i certyfikaty pod konkretne osoby i szkolenia.
-</span>
-                        <p>Dzięki temu wszystko odbywa się w jednym miejscu.
-
-
-                        </p>
-
+                        <h1>Manage courses and sales in one place</h1>
+                        <span>Bhpsoft allows you to maintain complete platform management through the admin panel. With it, you can create new courses, assign tests with questions and answers to them, manage course users, generate training cards and certificates for specific individuals and trainings.</span>
+                        <p>Thanks to this, everything happens in one place.</p>
                     </div>
                 </div>
             </div>
@@ -458,8 +479,8 @@
                             <span class="flaticon-accept"></span>
                         </div>
                         <div class="title-holder">
-                            <h3>Pełna kontrola sprzedaży</h3>
-                            <span>Ewidencja, raporty<br>i zarządzanie cenami i rabatami</span>
+                            <h3>Full sales control</h3>
+                            <span>Recording, reports,<br>and price and discount management</span>
                         </div>
                     </div>
                 </div>
@@ -471,8 +492,8 @@
                             <span class="flaticon-accept"></span>
                         </div>
                         <div class="title-holder">
-                            <h3>Zintegrowane płatności</h3>
-                            <span>Panel księgowy <br> i ewidencja sprzedaży</span>
+                            <h3>Integrated payments</h3>
+                            <span>Accounting panel<br>and sales records</span>
                         </div>
                     </div>
                 </div>
@@ -484,8 +505,8 @@
                             <span class="flaticon-accept"></span>
                         </div>
                         <div class="title-holder">
-                            <h3>Obsługa kursów</h3>
-                            <span>Dodawanie i edycja materiałów<br>oraz testów<span>
+                            <h3>Course management</h3>
+                            <span>Adding and editing materials<br>and tests<span>
                         </div>
                     </div>
                 </div>
@@ -507,8 +528,8 @@
                 </div>
                 <div class="col-xl-6">
                     <div class="company-info-content">
-                        <h1>Uzupełnij platformę o gotowe materiały szkoleniowe</h1>
-                        <span>Nasz zespół specjalistów przygotował pokaźny pakiet materiałów szkoleniowych (w tym filmy, prezentacje i plansze instruktażowe). Skorzystaj z oferty i miej pewność, ze wszystkie materiały posiadają aktualne zasoby i informacje.</span>
+                        <h1>Integrate the platform with ready-made training materials.</h1>
+                        <span>Our team of specialists has prepared a substantial package of training materials, including videos, presentations, and instructional boards. Take advantage of the offer and be assured that all materials feature up-to-date resources and information.</span>
                     </div>
                 </div>
             </div>
@@ -521,8 +542,8 @@
                             <span class="flaticon-accept"></span>
                         </div>
                         <div class="title-holder">
-                            <h3>Gotowe materiały szkoleniowe</h3>
-                            <span style="color:#000">Szkolenia w postaci interaktywnych prezentacji i filmów instruktażowych</span>
+                            <h3>Ready training materials</h3>
+                            <span style="color:#000">Trainings in the form of interactive presentations and instructional videos</span>
                         </div>
                     </div>
                 </div>
@@ -534,8 +555,8 @@
                             <span class="flaticon-accept"></span>
                         </div>
                         <div class="title-holder">
-                            <h3>Dodatkowe materiały</h3>
-                            <span>Nauka poprzez formę quizów, dopasowania, koła fortuny itp.</span>
+                            <h3>Additional materials</h3>
+                            <span>Learning through quizzes, matching, wheel of fortune, etc.</span>
                         </div>
                     </div>
                 </div>
@@ -547,8 +568,8 @@
                             <span class="flaticon-accept"></span>
                         </div>
                         <div class="title-holder">
-                            <h3>Aktualizacje</h3>
-                            <span>Ciągłu rozwój materiałów szkoleniowych i aktualizacja wg przepisów<span>
+                            <h3>Updates</h3>
+                            <span>Continuous development of training materials and updates according to regulations<span>
                         </div>
                     </div>
                 </div>
@@ -564,7 +585,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="sec-title clr-white float-left">
-                        <div class="title"><span>Przykładowe widoki</span></div>
+                        <div class="title"><span>Sample views</span></div>
                     </div>
                 </div>
             </div>
@@ -633,7 +654,7 @@
                         <div class="count-box">
                             <h1><span class="timer" data-from="1" data-to="12" data-speed="1000" data-refresh-interval="50">12</span></h1>
                             <div class="title">
-                                <h3>osób<br>teamu</h3>
+                                <h3>people<br>in the team</h3>
                             </div>
                         </div>
                     </div>
@@ -648,7 +669,7 @@
                         <div class="count-box">
                             <h1><span class="timer" data-from="1" data-to="100" data-speed="2000" data-refresh-interval="50">100</span>+</h1>
                             <div class="title">
-                                <h3>możliwych<br>szkoleń</h3>
+                                <h3>possible<br>trainings</h3>
                             </div>
                         </div>
                     </div>
@@ -663,7 +684,7 @@
                         <div class="count-box">
                             <h1><span class="timer" data-from="1" data-to="12" data-speed="1000" data-refresh-interval="50">12</span></h1>
                             <div class="title">
-                                <h3>tego<br>typu implementacji</h3>
+                                <h3>of this type<br>of implementations</h3>
                             </div>
                         </div>
                     </div>
@@ -678,7 +699,7 @@
                         <div class="count-box">
                             <h1><span class="timer" data-from="1" data-to="700" data-speed="3000" data-refresh-interval="50">700</span>+</h1>
                             <div class="title">
-                                <h3>wszystkich<br>realizacji</h3>
+                                <h3>of all<br>implementations</h3>
                             </div>
                         </div>
                     </div>
@@ -695,8 +716,8 @@
     <section class="choose-area" style="background-image: url(/images/parallax-background/choose-bg.jpg);">
         <div class="container">
             <div class="choose-title">
-                <h1>Prostota działania to droga do sukcesu</h1>
-                <p>Dzięki łatwości obsługi użytkownik nie ma najmniejszego problemu, by odbyć kurs kończący się certyfikatem. Jak to działa?</p>
+                <h1>Simplicity of operation is the path to success. </h1>
+                <p>Thanks to user-friendly interface, the user faces no problem in taking a course that concludes with a certificate. How does it work?</p>
             </div>
             <div class="row">
                 <!--Start Single Choose Item-->
@@ -706,8 +727,8 @@
                             <img src="/images/icon/online-learning_b_80px.png" alt="Icon">
                         </div>
                         <div class="text-holder">
-                            <h3>Wybierz szkolenie </h3>
-                            <p>Zakup szkolenie i zapoznaj się z materiałami przesłanymi na maila</p>
+                            <h3>Choose training</h3>
+                            <p>Purchase the training and familiarize yourself with the materials sent to your email.</p>
                         </div>
                     </div>
                 </div>
@@ -719,8 +740,8 @@
                             <img src="/images/icon/test_b_80px.png" alt="Icon">
                         </div>
                         <div class="text-holder">
-                            <h3>Rozwiąż test</h3>
-                            <p>W dowolnym momencie ucz się on-line i wypełnij test</p>
+                            <h3>Take the test</h3>
+                            <p>Learn online at any time and complete the test.</p>
                         </div>
                     </div>
                 </div>
@@ -732,8 +753,8 @@
                             <img src="/images/icon/flaticon-certificate_80px.png" alt="Icon">
                         </div>
                         <div class="text-holder">
-                            <h3>Odbierz certyfikat</h3>
-                            <p>Automatycznie wygenerowany dokument zostanie wysłany na maila</p>
+                            <h3>Receive your certificate</h3>
+                            <p>An automatically generated document will be sent to your email.</p>
                         </div>
                     </div>
                 </div>
@@ -751,12 +772,12 @@
                 <div class="col-xl-12">
                     <div class="inner-content fix wow fadeInUp" data-wow-delay="100ms">
                         <div class="title float-left">
-                            <h3>Potrzebujesz profesjonalnych materiałów SCORM <br> do swojej platformy szkoleniowej?</h3>
+                            <h3>Do you need professional SCORM materials <br> for your training platform?</h3>
                         </div>
 
                         <div class="quote-button-box button">
                             <a class="btn-one" href="https://skorm.pl/" target="_blank" style="white-space: nowrap;">
-                                Sprawdź na SKORM.pl
+                                Check out SKORM.pl.
                             </a>
                         </div>
                     </div>
@@ -772,7 +793,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="sec-title clr-white float-left">
-                            <div class="title"><span>Referencje</span></div>
+                            <div class="title"><span>References</span></div>
                         </div>
                     </div>
                 </div>
@@ -816,10 +837,10 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="sec-title call-us-title">
-                        <div class="title"><span>Wypełnij formularz</span></div>
+                        <div class="title"><span>Fill out the form</span></div>
                     </div>
                     <div class="call-us-text">
-                        <p>Już teraz dołącz do naszych zadowolonych klientów. Przygotujemy dla Ciebie platformę dopasowaną do Twoich potrzeb, funkcjonalnie i wizerunkowo.</p>
+                        <p>Join our satisfied customers now. We will prepare a platform tailored to your needs, both functionally and visually.</p>
                     </div>
                 </div>
             </div>
@@ -832,7 +853,7 @@
                                     <span class="icon-email"></span>
                                 </div>
                                 <div class="title">
-                                    <h3>Wyślij email</h3>
+                                    <h3>Send email</h3>
                                     <span>biuro@bhpsoft.pl</span>
                                 </div>
                             </li>
@@ -841,8 +862,8 @@
                                     <span class="icon-time-and-date"></span>
                                 </div>
                                 <div class="title">
-                                    <h3>Godziny pracy</h3>
-                                    <span>Pon - Pt: 9:00 - 17:00</span>
+                                    <h3>Working hours</h3>
+                                    <span>Mon - Fri: 9:00 AM - 5:00 PM</span>
                                 </div>
                             </li>
                             <li>
@@ -850,7 +871,7 @@
                                     <span class="icon-mobile-phone"></span>
                                 </div>
                                 <div class="title">
-                                    <h3>Dział handlowy</h3>
+                                    <h3>Sales Department</h3>
                                     <span>+48 535 954 276</span>
                                 </div>
                             </li>
@@ -858,7 +879,7 @@
                                 <div class="icon">
                                 </div>
                                 <div class="title">
-                                    <h3>Dział techniczny</h3>
+                                    <h3>Technical Department</h3>
                                     <span>+48 577 700 177</span>
                                 </div>
                             </li>
@@ -866,7 +887,7 @@
                                 <div class="icon">
                                 </div>
                                 <div class="title">
-                                    <h3>Rozliczenia</h3>
+                                    <h3>Accounting</h3>
                                     <span>+48 577 700 177</span>
                                 </div>
                             </li>
@@ -876,8 +897,8 @@
                                 <span class="icon-location"></span>
                             </div>
                             <div class="text">
-                                <a href="https://goo.gl/maps/FrUyXef5zdwY4vD48" target="blank"><h3>Zobacz lokalizację <span class="icon-thin-right-arrow"></span></h3>
-                                <address>Gdynia, Polska<br>Aleja Zwycięstwa 96/98 <br> Kod pocztowy: 81-451</address></a>
+                                <a href="https://goo.gl/maps/FrUyXef5zdwY4vD48" target="blank"><h3>View location <span class="icon-thin-right-arrow"></span></h3>
+                                <address>Gdynia, Poland<br>Aleja Zwycięstwa 96/98 <br> Postal code: 81-451</address></a>
                             </div>
                         </div>
                     </div>
@@ -888,24 +909,24 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-box">
-                                        <input type="text" name="form_name" placeholder="Imię i nazwisko*" required>
+                                        <input type="text" name="form_name" placeholder="Name and surname*" required>
                                     </div>
                                     <div class="input-box">
                                         <input type="email" name="form_email" placeholder="Email*" required>
                                     </div>
                                     <div class="input-box">
-                                        <input type="tel" name="form_phn" placeholder="Numer telefonu">
+                                        <input type="tel" name="form_phn" placeholder="Phone number">
                                     </div>
                                     <div class="input-box">
-                                        <input type="text" name="company_name" placeholder="Nazwa firmy">
+                                        <input type="text" name="company_name" placeholder="Company name">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-box">
-                                        <textarea name="requirements" placeholder="Treść"></textarea>
+                                        <textarea name="requirements" placeholder="Content"></textarea>
                                     </div>
                                     <div class="input-box">
-                                        <button class="btn-one" type="submit">Wyślij</button>
+                                        <button class="btn-one" type="submit">Send</button>
                                         <div class="contact-form__result"></div>
                                     </div>
                                 </div>
@@ -930,7 +951,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                     <div class="inner clearfix">
                         <div class="copyright-text float-left">
-                            <p>© 2022 bhpsoft Wszelkie prawa zastrzeżone</p>
+                            <p>© 2022 bhpsoft. All rights reserved.</p>
                         </div>
                     </div>
                 </div>

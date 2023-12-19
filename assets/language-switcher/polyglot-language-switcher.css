@@ -34,7 +34,7 @@
 }
 
 #polyglotLanguageSwitcher {
-	color: #fff !importent;
+	color: #fff !important;
 	line-height: normal;
 	position: relative; /* sets the initial position for the drop-down menu */	
 }
@@ -106,14 +106,14 @@
     border-top: none !important;
     border-radius: 5px 5px 10px 10px;
     z-index: 99999;
-    background: #f36727;
+    background: #007bff;
     width: 155px;
 }
 #polyglotLanguageSwitcher ul.dropdown li {
     width: 100px;
 	padding: 4px 10px;
 	display: block;
-	border-top: 1px solid #e55412;
+	border-top: 1px solid #007bff;
 	transition: all 0.2s ease-in-out;
 }
 #polyglotLanguageSwitcher ul.dropdown li a {
