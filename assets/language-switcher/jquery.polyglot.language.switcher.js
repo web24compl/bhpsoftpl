@@ -303,7 +303,7 @@
                 var url = window.location.href;
                 var page = url.substring(url.lastIndexOf("/")+1);
                 var urlPage = 'http://' + document.domain + '/' + settings.pagePrefix + id + '/' + page;
-                liElement = $("<li><a id=\"" + id + "\" href=\"" + id + "\">" + text + "</a></li>");
+                liElement = $("<li><a id=\"" + id + "\" href=\"/" + id + "\">" + text + "</a></li>");
             } else {
                 var href = document.URL.replace('#', '');
                 var params = parseQueryString();
@@ -312,7 +312,8 @@
                     href = href.substring(0, href.indexOf('?'));
                 }
                 href += toQueryString(params);
-                liElement = $("<li><a id=\"" + id + "\" href=\"" + id + "\">" + text + "</a></li>");
+
+                liElement = $("<li><a id=\"" + id + "\" href=\"/" + (id == 'pl' ? '' : id) + "\">" + text + "</a></li>");
             }
             liElement.bind('click', function () {
                 triggerEvent({name:'onChange', selectedItem: $(this).children(":first").attr('id'), element:rootElement, instance:ls});
