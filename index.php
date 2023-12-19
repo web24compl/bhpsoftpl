@@ -39,7 +39,7 @@ $languageCode = getCurrentLanguageCode(__DIR__);
 <div class="boxed_wrapper">
 
 
-    <section class="top-bar-style1" id="home">
+    <section class="top-bar-style1" id="home" style="height: 55px; padding: 10px 0 10px">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12">
