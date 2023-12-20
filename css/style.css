@@ -2276,8 +2276,8 @@ select:focus {
 .single-info-of-company .title-holder {
     position: relative;
     display: block;
-    padding-left: 15px;
-    margin: 26px 0 25px;
+    padding-right: 15px;
+    margin: 25px 0 25px;
 }
 .single-info-of-company .title-holder h3{
     font-size: 18px;

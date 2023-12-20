@@ -903,7 +903,7 @@ $languageCode = getCurrentLanguageCode(__DIR__);
                                 <span class="icon-location"></span>
                             </div>
                             <div class="text">
-                                <a href="https://goo.gl/maps/FrUyXef5zdwY4vD48" target="blank"><h3>Zobacz lokalizację <span class="icon-thin-right-arrow"></span></h3>
+                                <a href="https://goo.gl/maps/FrUyXef5zdwY4vD48" target="blank"><h3>Zobacz lokalizację <span class="icon-thin-right-arrow"></span></h3><br/>
                                 <address>Gdynia, Polska<br>Aleja Zwycięstwa 96/98 <br> Kod pocztowy: 81-451</address></a>
                             </div>
                         </div>
